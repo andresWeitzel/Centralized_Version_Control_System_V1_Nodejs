@@ -1,0 +1,27 @@
+{
+  "name": "software_versioner_nodejs",
+  "version": "1.0.0",
+  "description": "Módulo versionador de software implementado con Nodejs y Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresWeitzel/Software_Versioner_Nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andresWeitzel/Software_Versioner_Nodejs/issues"
+  },
+  "homepage": "https://github.com/andresWeitzel/Software_Versioner_Nodejs#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

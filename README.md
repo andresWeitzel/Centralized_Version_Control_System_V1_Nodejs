@@ -1,5 +1,5 @@
 # Software_Versioner_Nodejs
-Módulo versionador de software implementado con Nodejs y Typescript
+Módulo versionador de software implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, otros.
   
 <br>
 
@@ -71,15 +71,56 @@ Módulo versionador de software implementado con Nodejs y Typescript
 
 <br>
 
+
+*   Instalamos la última versión LTS de [Nodejs(v18)](https://nodejs.org/en/download)
+
 *   Creamos un entorno de trabajo a través de algún ide, luego de crear una carpeta nos posicionamos sobre la misma
 
 ```git
 cd 'projectName'
 ```
+* Creamos un proyecto npm de nodejs
 
-*   Instalamos la última versión LTS de [Nodejs(v18)](https://nodejs.org/en/download)
-
-
+```git
+npm init -y
+```
+* Creamos un archivo .gitignore y agregamos los files necesarios (por el momento node_modules)
+```git
+mkdir .gitignore
+```
+* Creamos un direct source (src) para agregar toda la lógica de nuestra app
+```git
+touch src
+```
+* Instalamos el plugin para [dotenv (variables de entorno)](https://www.npmjs.com/package/dotenv)
+```git
+npm i dotenv
+```
+* Instalamos el plugin para [morgan-middleware (errores, formatos, etc)](https://expressjs.com/en/resources/middleware/morgan.html)
+```git
+npm i morgan
+```
+* Instalamos el plugin para [nodemon (autoreload server)](https://www.npmjs.com/package/nodemon) de forma global
+```git
+npm i -g nodemon
+```
+* Instalamos el plugin para [nodemon (autoreload server)](https://www.npmjs.com/package/nodemon) para desarrollo
+```git
+npm i nodemon --save-dev
+```
+* Ejecutamos la app desde terminal para entorno local.
+```git
+npm run dev
+```
+* Ejecutamos la app desde terminal para entorno productivo.
+```git
+npm start
+```
+* Si se presenta algún mensaje indicando qué el puerto 8080 ya está en uso, podemos terminar todos los procesos dependientes y volver a ejecutar la app
+```git
+npx kill-port 8080
+npm run dev o npm start
+```
 
 <br>
 

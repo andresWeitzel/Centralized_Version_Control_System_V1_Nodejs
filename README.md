@@ -92,9 +92,18 @@ mkdir .gitignore
 ```git
 touch src
 ```
+* Instalamos el plugin para [express (framework web)](https://www.npmjs.com/package/express)
+```git
+npm i express
+```
 * Instalamos el plugin para [dotenv (variables de entorno)](https://www.npmjs.com/package/dotenv)
 ```git
 npm i dotenv
+npm i dotenv-expand
+```
+* Instalamos el plugin para cors
+```git
+npm i cors
 ```
 * Instalamos el plugin para [morgan-middleware (errores, formatos, etc)](https://expressjs.com/en/resources/middleware/morgan.html)
 ```git

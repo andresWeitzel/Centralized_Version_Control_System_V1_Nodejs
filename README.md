@@ -105,6 +105,10 @@ npm i dotenv-expand
 ```git
 npm i cors
 ```
+* Instalamos el plugin para convertir objetos json desde middleware
+```git
+npm i body-parser
+```
 * Instalamos el plugin para [morgan-middleware (errores, formatos, etc)](https://expressjs.com/en/resources/middleware/morgan.html)
 ```git
 npm i morgan

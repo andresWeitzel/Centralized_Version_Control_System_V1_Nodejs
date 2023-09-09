@@ -4,7 +4,7 @@ const versionerRouter = require('express').Router();
 const versionerController = require("../../controllers/versioner-controller");
 
 
-versionerRouter.get('/test', versionerController.getAllVersionerController);
+versionerRouter.get('/versions', versionerController.getAllVersionerController);
 
 
-module.exports={versionerRouter};
+module.exports=versionerRouter;

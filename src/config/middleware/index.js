@@ -1,6 +1,4 @@
 //External
-//External
-require("dotenv").config();
 const express = require("express");
 let morgan = require("morgan");
 let cors = require("cors");

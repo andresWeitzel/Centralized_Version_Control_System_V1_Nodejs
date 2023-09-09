@@ -231,6 +231,9 @@ npm run dev o npm start
 - https://github.com/npm/node-semver
 - https://keepcoding.io/blog/que-es-el-versionado-semantico-semver/
 
+#### File System
+* [Lectura de nombres de archivs a traves de directorios](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
+
 
 <br>
 

@@ -3,7 +3,8 @@ require("dotenv").config();
 //Enums
 const { statusCode } = require("../enums/http/status-code");
 //File-system
-const { readData, getFilesNames } = require("../file-system/operations/read-file");
+const { readData } = require("../file-system/operations/read-file");
+const { getFilesPathsNames } = require("../file-system/file-paths/operations");
 //Const-vars
 let msg;
 let code;
@@ -40,15 +41,15 @@ const getDataFile = async (req, res) => {
   }
 };
 
-const getFileNames = async (req, res) => {
+const getFilePathsNames = async (req, res) => {
   try {
     let dir ="/Users/andre/OneDrive/Escritorio/LenguajesProgramacion/NodeJs/Proyectos2023/Software_Versioner/Software_Versioner_Nodejs/"
-    let fileNames = await getFilesNames(dir);
+    let fileNames = await getFilesPathsNames(dir);
     code = statusCodeOk;
     res.status(code).send(fileNames);
   } catch (error) {
     code = statusCodeInternalServerError;
-    msg = `Error in getFileNames() function. Caused by ${error}`;
+    msg = `Error in getFilePathsNames() function. Caused by ${error}`;
     console.log(msg);
     res.status(code).send(msg);
   }
@@ -57,5 +58,5 @@ const getFileNames = async (req, res) => {
 module.exports = {
   getAllVersioner,
   getDataFile,
-  getFileNames
+  getFilePathsNames
 };

@@ -1,5 +1,5 @@
 # Software_Versioner_Nodejs
-Módulo versionador de software implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, otros.
+Sistema versionador de software implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, otros.
   
 <br>
 
@@ -233,6 +233,7 @@ npm run dev o npm start
 
 #### File System
 * [Lectura de nombres de archivs a traves de directorios](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
+* [Ejemplo Logica para File paths](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
 
 
 <br>

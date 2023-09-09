@@ -1,5 +1,4 @@
 const fsPromises = require("fs").promises;
-const fs = require("fs");
 const path = require("path");
 const archiveName = "../temp/files/example.txt";
 const encoding = "utf-8";
@@ -18,19 +17,7 @@ const readData = async () => {
   }
 };
 
-const getFilesNames = async (dir) => {
-  try {
-    return await fsPromises.readdir(dir, (err, files) => {
-        files.forEach(file => {
-          console.log(file);
-        });
-      });
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 module.exports = {
   readData,
-  getFilesNames
 };

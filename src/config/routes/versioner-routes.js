@@ -10,7 +10,7 @@ versionerRouter.get('/versions', versionerController.getAllVersioner);
 versionerRouter.get('/data-file', versionerController.getDataFile);
 
 
-versionerRouter.get('/file-names', versionerController.getFileNames);
+versionerRouter.get('/file-paths-names', versionerController.getFilePathsNames);
 
 
 module.exports=versionerRouter;

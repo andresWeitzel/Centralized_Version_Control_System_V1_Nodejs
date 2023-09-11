@@ -4,9 +4,9 @@ let morgan = require("morgan");
 let cors = require("cors");
 //Env vars
 const VERSIONER_BASE_URL = process.env.API_VERSIONER_LOCAL_BASE_URL;
-const VERSIONER_ENDPOINT = process.env.API_VERSIONER_ENDPOINT_NAME_URL;
+const FILE_SYSTEM_ENDPOINT = process.env.API_VERSIONER_FILE_SYSTEM_ENDPOINT_NAME_URL;
 //Config router
-const versionerRouter = require("../routes/versioner-routes");
+const fileSystemRouter = require("../routes/file-system-routes");
 
 /**
  * @description initial settings for cors, express, etc (Middleware)
@@ -37,8 +37,9 @@ const appMiddleware = async () => {
     //-- end config for data api --
 
     //-- start with routes --
-    app.use(VERSIONER_ENDPOINT, versionerRouter);
+    app.use(FILE_SYSTEM_ENDPOINT, fileSystemRouter);
     //-- end with routes --
+
 
     return app;
   } catch (error) {

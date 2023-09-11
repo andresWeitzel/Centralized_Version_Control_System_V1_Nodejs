@@ -3,11 +3,13 @@ require("dotenv").config();
 //Enums
 const { statusCode } = require("../enums/http/status-code");
 //File-system
-const { readData } = require("../file-system/operations/read-file");
-const { getFilesPathsNames } = require("../file-system/file-paths/operations");
+const { getFilesNamesFromPathService, getFileStatsFromPathService, getFileDataFromPathService } = require("../services/file-system-service");
 //Const-vars
 let msg;
 let code;
+let fileData;
+let filesNames;
+let filesStats;
 const statusCodeInternalServerError = statusCode.INTERNAL_SERVER_ERROR;
 const statusCodeBadRequest = statusCode.BAD_REQUEST;
 const statusCodeOk = statusCode.OK;
@@ -28,28 +30,40 @@ const getAllVersioner = async (req, res) => {
   }
 };
 
-const getDataFile = async (req, res) => {
+const getFileDataFromPathController = async (req, res) => {
   try {
-    let data = await readData();
+    fileData = await getFileDataFromPathService(req);
     code = statusCodeOk;
-    res.status(code).send(data);
+    res.status(code).send(fileData);
   } catch (error) {
     code = statusCodeInternalServerError;
-    msg = `Error in getDataFile() function. Caused by ${error}`;
+    msg = `Error in getFileDataFromPathController() function. Caused by ${error}`;
     console.log(msg);
     res.status(code).send(msg);
   }
 };
 
-const getFilePathsNames = async (req, res) => {
+const getFilesNamesFromPathController = async (req, res) => {
   try {
-    let dir ="/Users/andre/OneDrive/Escritorio/LenguajesProgramacion/NodeJs/Proyectos2023/Software_Versioner/Software_Versioner_Nodejs/"
-    let fileNames = await getFilesPathsNames(dir);
+    filesNames = await getFilesNamesFromPathService(req);
     code = statusCodeOk;
-    res.status(code).send(fileNames);
+    res.status(code).send(filesNames);
   } catch (error) {
     code = statusCodeInternalServerError;
-    msg = `Error in getFilePathsNames() function. Caused by ${error}`;
+    msg = `Error in getFilePathsNamesController() function. Caused by ${error}`;
+    console.log(msg);
+    res.status(code).send(msg);
+  }
+};
+
+const getFileStatsFromPathController = async (req, res) => {
+  try {
+    filesStats = await getFileStatsFromPathService(req);
+    code = statusCodeOk;
+    res.status(code).send(filesStats);
+  } catch (error) {
+    code = statusCodeInternalServerError;
+    msg = `Error in getFileStatsFromPathController() function. Caused by ${error}`;
     console.log(msg);
     res.status(code).send(msg);
   }
@@ -57,6 +71,8 @@ const getFilePathsNames = async (req, res) => {
 
 module.exports = {
   getAllVersioner,
-  getDataFile,
-  getFilePathsNames
+  getFileDataFromPathController,
+  getFilesNamesFromPathController,
+  getFileStatsFromPathController,
+  
 };

@@ -1,18 +1,23 @@
 //External
-const fileSystemRoutes = require('express').Router();
+const fileSystemRoutes = require("express").Router();
 //Controllers
 const fileSystemController = require("../../controllers/file-system-controller");
 
+fileSystemRoutes.get("/versions", fileSystemController.getAllVersioner);
 
-fileSystemRoutes.get('/versions', fileSystemController.getAllVersioner);
+fileSystemRoutes.post(
+  "/file-data-from-path",
+  fileSystemController.getFileDataFromPathController
+);
 
+fileSystemRoutes.post(
+  "/files-names-from-path",
+  fileSystemController.getFilesNamesFromPathController
+);
 
-fileSystemRoutes.get('/data-file', fileSystemController.getDataFile);
+fileSystemRoutes.post(
+  "/file-stats-from-path",
+  fileSystemController.getFileStatsFromPathController
+);
 
-
-fileSystemRoutes.get('/file-paths-names', fileSystemController.getFilePathsNames);
-
-
-
-
-module.exports=fileSystemRoutes;
+module.exports = fileSystemRoutes;

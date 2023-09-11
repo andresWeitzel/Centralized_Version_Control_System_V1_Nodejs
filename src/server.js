@@ -1,6 +1,5 @@
 //External
 require("dotenv").config();
-const listEndpoints = require('express-list-endpoints');
 //Environment vars
 const PORT = process.env.APP_PORT || 8082;
 //Config middleware
@@ -21,9 +20,6 @@ const run = async () => {
     app.listen(PORT, async () => {
       console.log(`Server is running on port ${PORT}`);
     });
-
-    
-    console.log(listEndpoints(app));
 
 
   } catch (error) {

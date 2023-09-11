@@ -2,6 +2,7 @@
 const express = require("express");
 let morgan = require("morgan");
 let cors = require("cors");
+let listEndpoints = require('express-list-endpoints');
 //Env vars
 const VERSIONER_BASE_URL = process.env.API_VERSIONER_LOCAL_BASE_URL;
 const FILE_SYSTEM_ENDPOINT = process.env.API_VERSIONER_FILE_SYSTEM_ENDPOINT_NAME_URL;
@@ -39,6 +40,11 @@ const appMiddleware = async () => {
     //-- start with routes --
     app.use(FILE_SYSTEM_ENDPOINT, fileSystemRouter);
     //-- end with routes --
+
+    //-- See all endpoints    
+    console.log(listEndpoints(app));
+
+
 
 
     return app;

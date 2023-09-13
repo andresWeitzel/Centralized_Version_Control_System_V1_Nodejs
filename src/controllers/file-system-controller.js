@@ -3,13 +3,15 @@ require("dotenv").config();
 //Enums
 const { statusCode } = require("../enums/http/status-code");
 //File-system
-const { getFilesNamesFromPathService, getFileStatsFromPathService, getFileDataFromPathService } = require("../services/file-system-service");
+const { getFilesNamesFromPathService, getFileStatsFromPathService, getFileDataFromPathService, getFileExtensionsFromPathService, getFileElementsFromPathService } = require("../services/file-system-service");
 //Const-vars
 let msg;
 let code;
 let fileData;
 let filesNames;
 let filesStats;
+let extension;
+let elements;
 const statusCodeInternalServerError = statusCode.INTERNAL_SERVER_ERROR;
 const statusCodeBadRequest = statusCode.BAD_REQUEST;
 const statusCodeOk = statusCode.OK;
@@ -50,7 +52,7 @@ const getFilesNamesFromPathController = async (req, res) => {
     res.status(code).send(filesNames);
   } catch (error) {
     code = statusCodeInternalServerError;
-    msg = `Error in getFilePathsNamesController() function. Caused by ${error}`;
+    msg = `Error in getFilesNamesFromPathController() function. Caused by ${error}`;
     console.log(msg);
     res.status(code).send(msg);
   }
@@ -69,10 +71,37 @@ const getFileStatsFromPathController = async (req, res) => {
   }
 };
 
+const getFileExtensionsFromPathController = async (req, res) => {
+  try {
+    extension = await getFileExtensionsFromPathService(req);
+    code = statusCodeOk;
+    res.status(code).send(extension);
+  } catch (error) {
+    code = statusCodeInternalServerError;
+    msg = `Error in getFileExtensionsFromPathController() function. Caused by ${error}`;
+    console.log(msg);
+    res.status(code).send(msg);
+  }
+};
+
+const getFileElementsFromPathController = async (req, res) => {
+  try {
+    elements = await getFileElementsFromPathService(req);
+    code = statusCodeOk;
+    res.status(code).send(elements);
+  } catch (error) {
+    code = statusCodeInternalServerError;
+    msg = `Error in getFileElementsFromPathController() function. Caused by ${error}`;
+    console.log(msg);
+    res.status(code).send(msg);
+  }
+};
+
 module.exports = {
   getAllVersioner,
   getFileDataFromPathController,
   getFilesNamesFromPathController,
   getFileStatsFromPathController,
-  
+  getFileExtensionsFromPathController,
+  getFileElementsFromPathController
 };

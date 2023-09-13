@@ -234,7 +234,7 @@ npm run dev o npm start
 #### File System
 * [Lectura de nombres de archivos a traves de directorios](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
 * [Ejemplo Logica para File paths](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
-
+* [Métodos filehandle](https://nodejs.org/api/fs.html)
 
 
 <br>

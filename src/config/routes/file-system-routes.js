@@ -20,4 +20,14 @@ fileSystemRoutes.post(
   fileSystemController.getFileStatsFromPathController
 );
 
+fileSystemRoutes.post(
+  "/file-extension-from-path",
+  fileSystemController.getFileExtensionsFromPathController
+);
+
+fileSystemRoutes.post(
+  "/file-elements-from-path",
+  fileSystemController.getFileElementsFromPathController
+);
+
 module.exports = fileSystemRoutes;

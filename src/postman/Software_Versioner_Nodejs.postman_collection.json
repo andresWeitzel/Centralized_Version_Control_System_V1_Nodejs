@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "70df2a62-7ce9-4707-94ed-ba6bf78ecfa0",
+		"name": "Software_Versioner_Nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18757319"
+	},
+	"item": [
+		{
+			"name": "FileSystem",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "GetAllVersioner",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{bearer-token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/file-system/versions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"file-system",
+										"versions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "GetAllFileDataFromPath",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{bearer-token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"directory_path\":\"/Users/andre/OneDrive/Escritorio/LenguajesProgramacion/NodeJs/Proyectos2023/Software_Versioner/Software_Versioner_Nodejs/.env\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/file-system/file-data-from-path",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"file-system",
+										"file-data-from-path"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllFilesNamesFromPath",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{bearer-token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"directory_path\":\"/Users/andre/OneDrive/Escritorio/LenguajesProgramacion/NodeJs/Proyectos2023/Software_Versioner/Software_Versioner_Nodejs/node_modules\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/file-system/files-names-from-path",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"file-system",
+										"files-names-from-path"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllFilesStatsFromPath",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{bearer-token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"directory_path\":\"/Users/andre/OneDrive/Escritorio/LenguajesProgramacion/NodeJs/Proyectos2023/Software_Versioner/Software_Versioner_Nodejs/.env\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/file-system/file-stats-from-path",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"file-system",
+										"file-stats-from-path"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllFilesExtensionsFromPath",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{bearer-token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"directory_path\":\"/Users/andre/OneDrive/Escritorio/LenguajesProgramacion/NodeJs/Proyectos2023/Software_Versioner/Software_Versioner_Nodejs/\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/file-system/file-extension-from-path",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"file-system",
+										"file-extension-from-path"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllFilesElementsFromPath",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{bearer-token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"directory_path\":\"/Users/andre/OneDrive/Escritorio/LenguajesProgramacion/NodeJs/Proyectos2023/Software_Versioner/Software_Versioner_Nodejs/README.md\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/file-system/file-elements-from-path",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"file-system",
+										"file-elements-from-path"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/api/v1/versioner"
+		}
+	]
+}

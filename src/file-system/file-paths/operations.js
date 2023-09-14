@@ -4,7 +4,7 @@ let path = require("path");
 //Const-vars
 const encoding = "utf-8";
 
-
+//Add operations
 /**
  * @description This function responsible for asynchronously reads the entire contents of a file
  * @param {string} dir string type

@@ -1,5 +1,6 @@
 //External
-const fs = require("fs/promises");
+const fsPromises = require("fs/promises");
+const fs = require("fs");
 let path = require("path");
 //Const-vars
 const encoding = "utf-8";
@@ -11,7 +12,7 @@ const encoding = "utf-8";
  */
 const getFileDataFromPath = async (dir) => {
   try {
-    const data = await fs.readFile(dir, encoding);
+    const data = await fsPromises.readFile(dir, encoding);
     console.log(data);
     return data;
   } catch (error) {
@@ -26,7 +27,7 @@ const getFileDataFromPath = async (dir) => {
  */
 const getFilesNamesFromPath = async (dir) => {
   try {
-    return await fs.readdir(dir, (err, files) => {
+    return await fsPromises.readdir(dir, (err, files) => {
       files.forEach((file) => {
         console.log(file);
       });
@@ -43,7 +44,7 @@ const getFilesNamesFromPath = async (dir) => {
  */
 const getFileStatsFromPath = async (dir) => {
   try {
-    return await fs.stat(dir, (err, stats) => {
+    return await fsPromises.stat(dir, (err, stats) => {
       stats.forEach((stat) => {
         console.log(stat);
       });
@@ -84,10 +85,25 @@ const getFileElementsFromPath = async (dir) => {
   }
 };
 
+/**
+ * @description This function responsible for check if directory exist or not and returning a boolean value
+ * @param {string} dir string type
+ */
+const checkDirectoryExistFromPath = async (dir) => {
+  try {
+    check = fs.existsSync(dir);
+    return check;
+  } catch (error) {
+    msg = `Error in checkDirectoryExistFromPath() function. Caused by ${error}`;
+    console.log(msg);
+  }
+};
+
 module.exports = {
   getFileDataFromPath,
   getFilesNamesFromPath,
   getFileStatsFromPath,
   getFileExtensionsFromPath,
-  getFileElementsFromPath
+  getFileElementsFromPath,
+  checkDirectoryExistFromPath
 };

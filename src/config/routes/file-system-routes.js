@@ -30,4 +30,9 @@ fileSystemRoutes.post(
   fileSystemController.getFileElementsFromPathController
 );
 
+fileSystemRoutes.post(
+  "/check-directory-exist-from-path",
+  fileSystemController.checkDirExistFromPathController
+);
+
 module.exports = fileSystemRoutes;

@@ -1,12 +1,14 @@
 //File-system
 const {
+  checkFolderExistFromPath
+} = require("../../file-system/file-paths/check-operations");
+const {
   getFilesNamesFromPath,
   getFileStatsFromPath,
   getFileDataFromPath,
   getFileExtensionsFromPath,
-  getFileElementsFromPath,
-  checkDirectoryExistFromPath
-} = require("../file-system/file-paths/operations");
+  getFileElementsFromPath
+} = require("../../file-system/file-paths/get-operations");
 //Const-vars
 let msg;
 let directoryPath;
@@ -88,25 +90,11 @@ const getFileElementsFromPathService = async (req, res) => {
   }
 };
 
-const checkDirExistFromPathService = async (req, res) => {
-  try {
-    directoryPath = req.body?.directory_path;
-    check =
-      directoryPath != (null || undefined)
-        ? await checkDirectoryExistFromPath(directoryPath)
-        : null;  
-    return check;
-  } catch (error) {
-    msg = `Error in checkDirExistFromPathService  () function. Caused by ${error}`;
-    console.log(msg);
-  }
-};
 
 module.exports = {
   getFileDataFromPathService,
   getFilesNamesFromPathService,
   getFileStatsFromPathService,
   getFileExtensionsFromPathService,
-  getFileElementsFromPathService,
-  checkDirExistFromPathService
+  getFileElementsFromPathService
 };

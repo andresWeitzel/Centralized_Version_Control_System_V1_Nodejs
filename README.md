@@ -1,5 +1,5 @@
-# Software_Versioner_Nodejs
-Sistema versionador de software implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, otros.
+# Local_Versioner_System_V1_Nodejs
+Sistema versionador de software local versión 1 implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, otros.
   
 <br>
 
@@ -224,6 +224,9 @@ npm run dev o npm start
   <summary>Ver</summary>
 
  <br>
+
+#### Documentos
+* [Acerca del control de versiones](https://unity.com/es/solutions/what-is-version-control)
 
 #### Versionadores Open source
 

@@ -1,7 +1,7 @@
 //External
 const fileSystemRoutes = require("express").Router();
 //Controllers
-const fileSystemController = require("../../controllers/file-system-controller");
+const fileSystemController = require("../../controllers/file-paths/file-system-controller");
 
 fileSystemRoutes.get("/versions", fileSystemController.getAllVersioner);
 
@@ -31,8 +31,8 @@ fileSystemRoutes.post(
 );
 
 fileSystemRoutes.post(
-  "/check-directory-exist-from-path",
-  fileSystemController.checkDirExistFromPathController
+  "/check-folder-exist-from-path",
+  fileSystemController.checkFolderExistFromPathController
 );
 
 module.exports = fileSystemRoutes;

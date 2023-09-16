@@ -1,9 +1,9 @@
 //External
 require("dotenv").config();
 //Enums
-const { statusCode } = require("../enums/http/status-code");
+const { statusCode } = require("../../enums/http/status-code");
 //File-system
-const { getFilesNamesFromPathService, getFileStatsFromPathService, getFileDataFromPathService, getFileExtensionsFromPathService, getFileElementsFromPathService, checkDirExistFromPathService } = require("../services/file-system-service");
+const { getFilesNamesFromPathService, getFileStatsFromPathService, getFileDataFromPathService, getFileExtensionsFromPathService, getFileElementsFromPathService, checkFolderExistFromPathService } = require("../../services/file-paths/file-system-service");
 //Const-vars
 let msg;
 let code;
@@ -98,18 +98,6 @@ const getFileElementsFromPathController = async (req, res) => {
   }
 };
 
-const checkDirExistFromPathController = async (req, res) => {
-  try {
-    check = await checkDirExistFromPathService(req);
-    code = statusCodeOk;
-    res.status(code).send(check);
-  } catch (error) {
-    code = statusCodeInternalServerError;
-    msg = `Error in checkDirExistFromPathController() function. Caused by ${error}`;
-    console.log(msg);
-    res.status(code).send(msg);
-  }
-};
 
 module.exports = {
   getAllVersioner,
@@ -118,5 +106,4 @@ module.exports = {
   getFileStatsFromPathController,
   getFileExtensionsFromPathController,
   getFileElementsFromPathController,
-  checkDirExistFromPathController
 };

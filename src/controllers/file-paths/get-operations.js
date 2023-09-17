@@ -1,9 +1,9 @@
 //External
 require("dotenv").config();
 //Enums
-const { statusCode } = require("../enums/http/status-code");
+const { statusCode } = require("../../enums/http/status-code");
 //File-system
-const { getFilesNamesFromPathService, getFileStatsFromPathService, getFileDataFromPathService, getFileExtensionsFromPathService, getFileElementsFromPathService } = require("../services/file-system-service");
+const { getFilesNamesFromPathService, getFileStatsFromPathService, getFileDataFromPathService, getFileExtensionsFromPathService, getFileElementsFromPathService } = require("../../services/file-paths/get-operations");
 //Const-vars
 let msg;
 let code;
@@ -12,6 +12,7 @@ let filesNames;
 let filesStats;
 let extension;
 let elements;
+let check;
 const statusCodeInternalServerError = statusCode.INTERNAL_SERVER_ERROR;
 const statusCodeBadRequest = statusCode.BAD_REQUEST;
 const statusCodeOk = statusCode.OK;
@@ -97,11 +98,12 @@ const getFileElementsFromPathController = async (req, res) => {
   }
 };
 
+
 module.exports = {
   getAllVersioner,
   getFileDataFromPathController,
   getFilesNamesFromPathController,
   getFileStatsFromPathController,
   getFileExtensionsFromPathController,
-  getFileElementsFromPathController
+  getFileElementsFromPathController,
 };

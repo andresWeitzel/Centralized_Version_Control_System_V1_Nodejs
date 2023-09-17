@@ -1,17 +1,21 @@
 //External
-const fs = require("fs/promises");
+const fsPromises = require("fs/promises");
+const fs = require("fs");
 let path = require("path");
 //Const-vars
 const encoding = "utf-8";
+let msg;
+let data;
+let extension;
 
-
+//Add operations
 /**
  * @description This function responsible for asynchronously reads the entire contents of a file
  * @param {string} dir string type
  */
 const getFileDataFromPath = async (dir) => {
   try {
-    const data = await fs.readFile(dir, encoding);
+    data = await fsPromises.readFile(dir, encoding);
     console.log(data);
     return data;
   } catch (error) {
@@ -26,7 +30,7 @@ const getFileDataFromPath = async (dir) => {
  */
 const getFilesNamesFromPath = async (dir) => {
   try {
-    return await fs.readdir(dir, (err, files) => {
+    return await fsPromises.readdir(dir, (err, files) => {
       files.forEach((file) => {
         console.log(file);
       });
@@ -43,7 +47,7 @@ const getFilesNamesFromPath = async (dir) => {
  */
 const getFileStatsFromPath = async (dir) => {
   try {
-    return await fs.stat(dir, (err, stats) => {
+    return await fsPromises.stat(dir, (err, stats) => {
       stats.forEach((stat) => {
         console.log(stat);
       });
@@ -60,7 +64,7 @@ const getFileStatsFromPath = async (dir) => {
  */
 const getFileExtensionsFromPath = async (dir) => {
   try {
-    let extension = path.extname(dir);
+    extension = path.extname(dir);
     console.log(extension);
     return extension;
   } catch (error) {
@@ -75,7 +79,7 @@ const getFileExtensionsFromPath = async (dir) => {
  */
 const getFileElementsFromPath = async (dir) => {
   try {
-    let extension = path.parse(dir);
+    extension = path.parse(dir);
     console.log(extension);
     return extension;
   } catch (error) {
@@ -84,10 +88,12 @@ const getFileElementsFromPath = async (dir) => {
   }
 };
 
+
+
 module.exports = {
   getFileDataFromPath,
   getFilesNamesFromPath,
   getFileStatsFromPath,
   getFileExtensionsFromPath,
-  getFileElementsFromPath
+  getFileElementsFromPath,
 };

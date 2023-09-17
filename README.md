@@ -1,5 +1,5 @@
-# Software_Versioner_Nodejs
-Sistema versionador de software implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, otros.
+# Centralized_Version_Control_System_V1_Nodejs
+Sistema de control de versiones web centralizado implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, otros. 
   
 <br>
 
@@ -224,6 +224,14 @@ npm run dev o npm start
   <summary>Ver</summary>
 
  <br>
+
+#### Documentos
+* [Acerca del control de versiones](https://unity.com/es/solutions/what-is-version-control)
+* [Ejemplos de softwares de control de versiones](https://www.drauta.com/5-softwares-de-control-de-versiones)
+
+#### Proyectos
+* [Desarrollo de una aplicación Web para
+control de versiones de software](https://e-archivo.uc3m.es/bitstream/handle/10016/11936/PFC-David%20Otero%20Gutierrez.pdf?sequence=1&isAllowed=y)
 
 #### Versionadores Open source
 

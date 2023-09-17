@@ -5,9 +5,10 @@ let cors = require("cors");
 let listEndpoints = require('express-list-endpoints');
 //Env vars
 const VERSIONER_BASE_URL = process.env.API_VERSIONER_LOCAL_BASE_URL;
-const FILE_SYSTEM_ENDPOINT = process.env.API_VERSIONER_FILE_SYSTEM_ENDPOINT_NAME_URL;
+const FILE_PATHS_ENDPOINT = process.env.API_VERSIONER_FILE_PATHS_ENDPOINT_NAME_URL;
 //Config router
-const fileSystemRouter = require("../routes/file-system-routes");
+const filePathsCheckOpRoutes = require("../routes/file-paths/check-operations-routes");
+const filePathsGetOpRoutes = require("../routes/file-paths/get-operations-routes");
 
 /**
  * @description initial settings for cors, express, etc (Middleware)
@@ -38,7 +39,8 @@ const appMiddleware = async () => {
     //-- end config for data api --
 
     //-- start with routes --
-    app.use(FILE_SYSTEM_ENDPOINT, fileSystemRouter);
+    app.use(FILE_PATHS_ENDPOINT, filePathsCheckOpRoutes);
+    app.use(FILE_PATHS_ENDPOINT, filePathsGetOpRoutes);
     //-- end with routes --
 
     //-- See all endpoints    

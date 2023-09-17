@@ -8,6 +8,7 @@ const VERSIONER_BASE_URL = process.env.API_VERSIONER_LOCAL_BASE_URL;
 const FILE_PATHS_ENDPOINT = process.env.API_VERSIONER_FILE_PATHS_ENDPOINT_NAME_URL;
 //Config router
 const filePathsCheckOpRoutes = require("../routes/file-paths/check-operations-routes");
+const filePathsGetOpRoutes = require("../routes/file-paths/get-operations-routes");
 
 /**
  * @description initial settings for cors, express, etc (Middleware)
@@ -39,6 +40,7 @@ const appMiddleware = async () => {
 
     //-- start with routes --
     app.use(FILE_PATHS_ENDPOINT, filePathsCheckOpRoutes);
+    app.use(FILE_PATHS_ENDPOINT, filePathsGetOpRoutes);
     //-- end with routes --
 
     //-- See all endpoints    

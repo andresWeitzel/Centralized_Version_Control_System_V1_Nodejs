@@ -228,6 +228,7 @@ npm run dev o npm start
 #### Documentos
 * [Acerca del control de versiones](https://unity.com/es/solutions/what-is-version-control)
 * [Ejemplos de softwares de control de versiones](https://www.drauta.com/5-softwares-de-control-de-versiones)
+* [Tutotiales tecnologías](http://url.nodejs.cn/55rsED)
 
 #### Proyectos
 * [Desarrollo de una aplicación Web para
@@ -243,6 +244,7 @@ control de versiones de software](https://e-archivo.uc3m.es/bitstream/handle/100
 * [Lectura de nombres de archivos a traves de directorios](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
 * [Ejemplo Logica para File paths](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
 * [Métodos filehandle](https://nodejs.org/api/fs.html)
+* [Copiar archivos y directorios](https://javascript.plainenglish.io/how-to-copy-files-and-folders-in-node-js-e37394fdf4c0)
 
 
 <br>

@@ -9,6 +9,7 @@ const FILE_PATHS_ENDPOINT = process.env.API_VERSIONER_FILE_PATHS_ENDPOINT_NAME_U
 //Config router
 const filePathsCheckOpRoutes = require("../routes/file-paths/check-operations-routes");
 const filePathsGetOpRoutes = require("../routes/file-paths/get-operations-routes");
+const filePathsCreateOpRoutes = require("../routes/file-paths/create-operations-routes");
 
 /**
  * @description initial settings for cors, express, etc (Middleware)
@@ -41,6 +42,7 @@ const appMiddleware = async () => {
     //-- start with routes --
     app.use(FILE_PATHS_ENDPOINT, filePathsCheckOpRoutes);
     app.use(FILE_PATHS_ENDPOINT, filePathsGetOpRoutes);
+    app.use(FILE_PATHS_ENDPOINT, filePathsCreateOpRoutes);
     //-- end with routes --
 
     //-- See all endpoints    

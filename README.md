@@ -1,5 +1,5 @@
 # Centralized_Version_Control_System_V1_Nodejs
-Sistema de control de versiones web centralizado implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, otros. 
+Sistema de control de versiones web centralizado implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, etc. 
   
 <br>
 

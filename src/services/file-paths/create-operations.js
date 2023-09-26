@@ -1,5 +1,5 @@
 //File System
-const { copyDirsFromPath } = require("../../file-system/file-paths/create-operations");
+const { copyDirsFromPath } = require("../../helpers/file-system/file-paths/create-operations");
 //Const-vars
 let directoryPathFrom;
 let directoryPathTo;

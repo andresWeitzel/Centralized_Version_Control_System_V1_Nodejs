@@ -5,7 +5,7 @@
     getFileDataFromPath,
     getFileExtensionsFromPath,
     getFileElementsFromPath
-  } = require("../../file-system/file-paths/get-operations");
+  } = require("../../helpers/file-system/file-paths/get-operations");
   //Const-vars
   let msg;
   let directoryPath;

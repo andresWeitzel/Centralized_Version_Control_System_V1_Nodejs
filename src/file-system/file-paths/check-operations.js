@@ -7,6 +7,8 @@ const encoding = "utf-8";
 let check;
 let msg;
 
+//For refactor
+
 
 /**
  * @description This function responsible for check if directory exist or not and returning a boolean value

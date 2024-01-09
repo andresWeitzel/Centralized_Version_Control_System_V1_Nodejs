@@ -3,7 +3,13 @@ require("dotenv").config();
 //Enums
 const { statusCode } = require("../../enums/http/status-code");
 //File-system
-const { getFilesNamesFromPathService, getFileStatsFromPathService, getFileDataFromPathService, getFileExtensionsFromPathService, getFileElementsFromPathService } = require("../../services/file-paths/get-operations");
+const {
+  getFilesNamesFromPathService,
+  getFileStatsFromPathService,
+  getFileDataFromPathService,
+  getFileExtensionsFromPathService,
+  getFileElementsFromPathService,
+} = require("../../services/file-paths/get-operations");
 //Const-vars
 let msg;
 let code;
@@ -97,7 +103,6 @@ const getFileElementsFromPathController = async (req, res) => {
     res.status(code).send(msg);
   }
 };
-
 
 module.exports = {
   getAllVersioner,

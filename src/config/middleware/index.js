@@ -2,10 +2,11 @@
 const express = require("express");
 let morgan = require("morgan");
 let cors = require("cors");
-let listEndpoints = require('express-list-endpoints');
+let listEndpoints = require("express-list-endpoints");
 //Env vars
 const VERSIONER_BASE_URL = process.env.API_VERSIONER_LOCAL_BASE_URL;
-const FILE_PATHS_ENDPOINT = process.env.API_VERSIONER_FILE_PATHS_ENDPOINT_NAME_URL;
+const FILE_PATHS_ENDPOINT =
+  process.env.API_VERSIONER_FILE_PATHS_ENDPOINT_NAME_URL;
 //Config router
 const filePathsCheckOpRoutes = require("../routes/file-paths/check-operations-routes");
 const filePathsGetOpRoutes = require("../routes/file-paths/get-operations-routes");
@@ -24,7 +25,7 @@ const appMiddleware = async () => {
     //-- start cors --
     //Set cors
     var corsOptions = {
-      origin: VERSIONER_BASE_URL
+      origin: VERSIONER_BASE_URL,
     };
     //Use cors options
     app.use(cors(corsOptions));
@@ -43,11 +44,8 @@ const appMiddleware = async () => {
     app.use(FILE_PATHS_ENDPOINT, filePathsGetOpRoutes);
     //-- end with routes --
 
-    //-- See all endpoints    
+    //-- See all endpoints
     console.log(listEndpoints(app));
-
-
-
 
     return app;
   } catch (error) {
@@ -56,5 +54,5 @@ const appMiddleware = async () => {
 };
 
 module.exports = {
-  appMiddleware
+  appMiddleware,
 };

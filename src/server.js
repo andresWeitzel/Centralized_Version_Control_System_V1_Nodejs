@@ -20,8 +20,6 @@ const run = async () => {
     app.listen(PORT, async () => {
       console.log(`Server is running on port ${PORT}`);
     });
-
-
   } catch (error) {
     msg = `Error in run() function, server.js file. Caused by ${error}`;
     console.log(msg);

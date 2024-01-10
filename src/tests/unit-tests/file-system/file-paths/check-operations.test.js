@@ -6,7 +6,9 @@ const {
 //Const
 const MOCK_NUMBER_VALUE = 12;
 const MOCK_BOOLEAN_VALUE = true;
+const MOCK_STRING_VALUE = "MOCK_STRING_VALUE";
 const MOCK_INVALID_DIRECTORY = "f://AVDAV/ASDAD";
+const MOCK_VALID_DIRECTORY = "/c/Users";
 //Vars
 let checkFolderExistFromPathResult;
 let mockIdNameValue = "id";
@@ -18,59 +20,90 @@ describe("- checkFolderExistFromPath function (Unit Test)", () => {
       "Should return a boolean value if a string type argument is passed (This function expects one argument of type string).";
     it(msg, async () => {
       checkFolderExistFromPathResult = await checkFolderExistFromPath(
-        MOCK_INVALID_DIRECTORY,
+        MOCK_STRING_VALUE
       );
       await expect(typeof checkFolderExistFromPathResult == "boolean").toBe(
-        true,
+        true
       );
     });
 
-    // msg =
-    //   "Should return a null value if number type argument is passed (This function expects one argument of type string).";
-    // it(msg, async () => {
-    //   checkFolderExistFromPathResult = await checkFolderExistFromPath(MOCK_NUMBER_VALUE);
-    //   await expect(checkFolderExistFromPathResult == null).toBe(true);
-    // });
+    msg =
+      "Should return a boolean value if a string type with invalid path argument is passed (This function expects one argument of type string).";
+    it(msg, async () => {
+      checkFolderExistFromPathResult = await checkFolderExistFromPath(
+        MOCK_INVALID_DIRECTORY
+      );
+      await expect(typeof checkFolderExistFromPathResult == "boolean").toBe(
+        true
+      );
+    });
 
-    // msg =
-    //   "Should return a null value if boolean type argument is passed (This function expects one argument of type string).";
-    // it(msg, async () => {
-    //   checkFolderExistFromPathResult = await checkFolderExistFromPath(MOCK_BOOLEAN_VALUE);
-    //   await expect(checkFolderExistFromPathResult == null).toBe(true);
-    // });
+    msg =
+      "Should return a boolean value if a string type with valid path argument is passed (This function expects one argument of type string).";
+    it(msg, async () => {
+      checkFolderExistFromPathResult = await checkFolderExistFromPath(
+        MOCK_VALID_DIRECTORY
+      );
+      await expect(typeof checkFolderExistFromPathResult == "boolean").toBe(
+        true
+      );
+    });
 
-    // msg =
-    //   "Should return a null value if others arguments are passed (This function expects one argument of type string).";
-    // it(msg, async () => {
-    //   checkFolderExistFromPathResult = await checkFolderExistFromPath(
-    //     MOCK_BOOLEAN_VALUE,
-    //     MOCK_NUMBER_VALUE,
-    //     mockCodeNameValue
-    //   );
-    //   await expect(checkFolderExistFromPathResult == null).toBe(true);
-    // });
+    msg =
+      "Should return a boolean value if a number type argument is passed (This function expects one argument of type string).";
+    it(msg, async () => {
+      checkFolderExistFromPathResult = await checkFolderExistFromPath(
+        MOCK_NUMBER_VALUE
+      );
+      await expect(typeof checkFolderExistFromPathResult == "boolean").toBe(
+        true
+      );
+    });
 
-    // msg =
-    //   "Should return a null value if a null value is passed (This function expects one argument of type string).";
-    // it(msg, async () => {
-    //   checkFolderExistFromPathResult = await checkFolderExistFromPath(null);
-    //   await expect(checkFolderExistFromPathResult == null).toBe(true);
-    // });
+    msg =
+      "Should return a boolean value if a boolean type argument is passed (This function expects one argument of type string).";
+    it(msg, async () => {
+      checkFolderExistFromPathResult = await checkFolderExistFromPath(
+        MOCK_BOOLEAN_VALUE
+      );
+      await expect(typeof checkFolderExistFromPathResult == "boolean").toBe(
+        true
+      );
+    });
 
-    // msg =
-    //   "Should return a null value if a undefined value is passed (This function expects one argument of type string).";
-    // it(msg, async () => {
-    //   checkFolderExistFromPathResult = await checkFolderExistFromPath(undefined);
-    //   await expect(checkFolderExistFromPathResult == null).toBe(true);
-    // });
+    msg =
+      "Should return a boolean value if others arguments are passed (This function expects one argument of type string).";
+    it(msg, async () => {
+      checkFolderExistFromPathResult = await checkFolderExistFromPath(
+        MOCK_BOOLEAN_VALUE,
+        MOCK_NUMBER_VALUE,
+        MOCK_STRING_VALUE
+      );
+      await expect(typeof checkFolderExistFromPathResult == "boolean").toBe(
+        true
+      );
+    });
 
-    // msg =
-    //   "Should return a null value if a number value is passed (This function expects one argument of type string).";
-    // it(msg, async () => {
-    //   checkFolderExistFromPathResult = await checkFolderExistFromPath(MOCK_NUMBER_VALUE);
-    //   await expect(checkFolderExistFromPathResult == null).toBe(true);
-    // });
-  });
+    msg =
+      "Should return a boolean value if a null value is passed (This function expects one argument of type string).";
+    it(msg, async () => {
+      checkFolderExistFromPathResult = await checkFolderExistFromPath(null);
+      await expect(typeof checkFolderExistFromPathResult == "boolean").toBe(
+        true
+      );
+    });
+
+    msg =
+      "Should return a boolean value if undefined value is passed (This function expects one argument of type string).";
+    it(msg, async () => {
+      checkFolderExistFromPathResult = await checkFolderExistFromPath(
+        undefined
+      );
+      await expect(typeof checkFolderExistFromPathResult == "boolean").toBe(
+        true
+      );
+    });
+                     });
 
   //   describe("2) Check cases for return cases.", () => {
   //     msg =

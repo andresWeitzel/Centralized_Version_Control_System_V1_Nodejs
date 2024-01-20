@@ -7,27 +7,27 @@ filePathsGetOpRoutes.get("/versions", filePathsController.getAllVersioner);
 
 filePathsGetOpRoutes.post(
   "/file-data-from-path",
-  filePathsController.getFileDataFromPathController
+  filePathsController.getFileDataFromPathController,
 );
 
 filePathsGetOpRoutes.post(
   "/files-names-from-path",
-  filePathsController.getFilesNamesFromPathController
+  filePathsController.getFilesNamesFromPathController,
 );
 
 filePathsGetOpRoutes.post(
   "/file-stats-from-path",
-  filePathsController.getFileStatsFromPathController
+  filePathsController.getFileStatsFromPathController,
 );
 
 filePathsGetOpRoutes.post(
   "/file-extension-from-path",
-  filePathsController.getFileExtensionsFromPathController
+  filePathsController.getFileExtensionsFromPathController,
 );
 
 filePathsGetOpRoutes.post(
   "/file-elements-from-path",
-  filePathsController.getFileElementsFromPathController
+  filePathsController.getFileElementsFromPathController,
 );
 
 module.exports = filePathsGetOpRoutes;

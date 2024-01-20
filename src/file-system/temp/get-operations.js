@@ -88,8 +88,6 @@ const getFileElementsFromPath = async (dir) => {
   }
 };
 
-
-
 module.exports = {
   getFileDataFromPath,
   getFilesNamesFromPath,

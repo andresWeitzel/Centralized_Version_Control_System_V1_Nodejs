@@ -6,13 +6,13 @@ const {
 } = require("../../services/file-paths/check-operations");
 //Enums
 const { statusCode } = require("../../enums/http/status-code");
-//Const-vars
+//Const
+const statusCodeInternalServerError = statusCode.INTERNAL_SERVER_ERROR;
+const statusCodeOk = statusCode.OK;
+//Vars
 let msg;
 let code;
 let check;
-const statusCodeInternalServerError = statusCode.INTERNAL_SERVER_ERROR;
-const statusCodeBadRequest = statusCode.BAD_REQUEST;
-const statusCodeOk = statusCode.OK;
 
 const checkFolderExistFromPathController = async (req, res) => {
   try {

@@ -1,4 +1,6 @@
-const { checkFolderExistFromPath } = require("../../file-system/file-paths/check-operations");
+const {
+  checkFolderExistFromPath,
+} = require("../../file-system/file-paths/check-operations");
 
 const checkFolderExistFromPathService = async (req, res) => {
   try {

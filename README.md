@@ -1,6 +1,7 @@
-# Centralized_Version_Control_System_V1_Nodejs
-Sistema de control de versiones web centralizado implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, etc. 
-  
+# Centralized\_Version\_Control\_System\_V1\_Nodejs
+
+Sistema de control de versiones web centralizado implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, etc.
+
 <br>
 
 ## Índice 📜
@@ -57,7 +58,6 @@ Sistema de control de versiones web centralizado implementado con NodeJS, Typesc
   <summary>Ver</summary>
 <br>
 
-
 <br>
 
 </details>
@@ -71,7 +71,6 @@ Sistema de control de versiones web centralizado implementado con NodeJS, Typesc
 
 <br>
 
-
 *   Instalamos la última versión LTS de [Nodejs(v18)](https://nodejs.org/en/download)
 
 *   Creamos un entorno de trabajo a través de algún ide, luego de crear una carpeta nos posicionamos sobre la misma
@@ -79,57 +78,82 @@ Sistema de control de versiones web centralizado implementado con NodeJS, Typesc
 ```git
 cd 'projectName'
 ```
-* Creamos un proyecto npm de nodejs
+
+*   Creamos un proyecto npm de nodejs
 
 ```git
 npm init -y
 ```
-* Creamos un archivo .gitignore y agregamos los files necesarios (por el momento node_modules)
+
+*   Creamos un archivo .gitignore y agregamos los files necesarios (por el momento node\_modules)
+
 ```git
 mkdir .gitignore
 ```
-* Creamos un direct source (src) para agregar toda la lógica de nuestra app
+
+*   Creamos un direct source (src) para agregar toda la lógica de nuestra app
+
 ```git
 touch src
 ```
-* Instalamos el plugin para [express (framework web)](https://www.npmjs.com/package/express)
+
+*   Instalamos el plugin para [express (framework web)](https://www.npmjs.com/package/express)
+
 ```git
 npm i express
 ```
-* Instalamos el plugin para [dotenv (variables de entorno)](https://www.npmjs.com/package/dotenv)
+
+*   Instalamos el plugin para [dotenv (variables de entorno)](https://www.npmjs.com/package/dotenv)
+
 ```git
 npm i dotenv
 npm i dotenv-expand
 ```
-* Instalamos el plugin para cors
+
+*   Instalamos el plugin para cors
+
 ```git
 npm i cors
 ```
-* Instalamos el plugin para convertir objetos json desde middleware
+
+*   Instalamos el plugin para convertir objetos json desde middleware
+
 ```git
 npm i body-parser
 ```
-* Instalamos el plugin para [morgan-middleware (errores, formatos, etc)](https://expressjs.com/en/resources/middleware/morgan.html)
+
+*   Instalamos el plugin para [morgan-middleware (errores, formatos, etc)](https://expressjs.com/en/resources/middleware/morgan.html)
+
 ```git
 npm i morgan
 ```
-* Instalamos el plugin para [nodemon (autoreload server)](https://www.npmjs.com/package/nodemon) de forma global
+
+*   Instalamos el plugin para [nodemon (autoreload server)](https://www.npmjs.com/package/nodemon) de forma global
+
 ```git
 npm i -g nodemon
 ```
-* Instalamos el plugin para [nodemon (autoreload server)](https://www.npmjs.com/package/nodemon) para desarrollo
+
+*   Instalamos el plugin para [nodemon (autoreload server)](https://www.npmjs.com/package/nodemon) para desarrollo
+
 ```git
 npm i nodemon --save-dev
 ```
-* Ejecutamos la app desde terminal para entorno local.
+
+*   Ejecutamos la app desde terminal para entorno local.
+
 ```git
 npm run dev
 ```
-* Ejecutamos la app desde terminal para entorno productivo.
+
+*   Ejecutamos la app desde terminal para entorno productivo.
+
 ```git
 npm start
 ```
-* Si se presenta algún mensaje indicando qué el puerto 8080 ya está en uso, podemos terminar todos los procesos dependientes y volver a ejecutar la app
+
+*   Si se presenta algún mensaje indicando qué el puerto 8080 ya está en uso, podemos terminar todos los procesos dependientes y volver a ejecutar la app
+
 ```git
 npx kill-port 8080
 npm run dev o npm start
@@ -139,7 +163,6 @@ npm run dev o npm start
 
 </details>
 
-
 ### 1.3) Comandos de utilidad [🔝](#índice-)
 
 <details>
@@ -147,7 +170,6 @@ npm run dev o npm start
 
  <br>
 
- 
 <br>
 
 </details>
@@ -226,24 +248,26 @@ npm run dev o npm start
  <br>
 
 #### Documentos
-* [Acerca del control de versiones](https://unity.com/es/solutions/what-is-version-control)
-* [Ejemplos de softwares de control de versiones](https://www.drauta.com/5-softwares-de-control-de-versiones)
+
+*   [Acerca del control de versiones](https://unity.com/es/solutions/what-is-version-control)
+*   [Ejemplos de softwares de control de versiones](https://www.drauta.com/5-softwares-de-control-de-versiones)
 
 #### Proyectos
-* [Desarrollo de una aplicación Web para
-control de versiones de software](https://e-archivo.uc3m.es/bitstream/handle/10016/11936/PFC-David%20Otero%20Gutierrez.pdf?sequence=1&isAllowed=y)
+
+*   [Desarrollo de una aplicación Web para
+    control de versiones de software](https://e-archivo.uc3m.es/bitstream/handle/10016/11936/PFC-David%20Otero%20Gutierrez.pdf?sequence=1\&isAllowed=y)
 
 #### Versionadores Open source
 
-- https://devhints.io/semver
-- https://github.com/npm/node-semver
-- https://keepcoding.io/blog/que-es-el-versionado-semantico-semver/
+*   https://devhints.io/semver
+*   https://github.com/npm/node-semver
+*   https://keepcoding.io/blog/que-es-el-versionado-semantico-semver/
 
 #### File System
-* [Lectura de nombres de archivos a traves de directorios](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
-* [Ejemplo Logica para File paths](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
-* [Métodos filehandle](https://nodejs.org/api/fs.html)
 
+*   [Lectura de nombres de archivos a traves de directorios](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
+*   [Ejemplo Logica para File paths](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
+*   [Métodos filehandle](https://nodejs.org/api/fs.html)
 
 <br>
 

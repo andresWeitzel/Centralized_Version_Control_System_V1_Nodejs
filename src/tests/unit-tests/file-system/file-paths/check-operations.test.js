@@ -13,6 +13,8 @@ const MOCK_VALID_DIRECTORY = process.env.MOCK_VALID_DIRECTORY_01;
 let checkFolderExistFromPathResult;
 let msg;
 
+//Updated catch cases
+
 describe("- checkFolderExistFromPath function (Unit Test)", () => {
   describe("1) Check cases for arguments.", () => {
     msg =

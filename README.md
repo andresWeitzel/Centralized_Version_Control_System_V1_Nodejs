@@ -1,3 +1,17 @@
+![Index app](./doc/assets/img/centralized.png)
+
+<p align="right">
+     <a href="./translation/README.es.md" target="_blank">
+       <img src="./doc/assets/translation/arg-flag.jpg" width="10%" height="10%" />
+   </a>
+    <a href="./README.md" target="_blank">
+       <img src="./doc/assets/translation/eeuu-flag.jpg" width="10%" height="10%" />
+   </a>
+</p>
+
+<div align="center">
+
+
 # Centralized\_Version\_Control\_System\_V1\_Nodejs
 
 Sistema de control de versiones web centralizado implementado con NodeJS, Typescript, Express, dotenv, nodemon, morgan, etc.

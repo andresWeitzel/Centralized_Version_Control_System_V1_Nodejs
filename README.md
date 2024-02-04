@@ -2,10 +2,10 @@
 
 <p align="right">
      <a href="./translation/README.es.md" target="_blank">
-       <img src="./doc/assets/translation/arg-flag.jpg" width="10%" height="10%" />
+       <img src="./doc/assets/translations/arg-flag.jpg" width="10%" height="10%" />
    </a>
     <a href="./README.md" target="_blank">
-       <img src="./doc/assets/translation/eeuu-flag.jpg" width="10%" height="10%" />
+       <img src="./doc/assets/translations/eeuu-flag.jpg" width="10%" height="10%" />
    </a>
 </p>
 

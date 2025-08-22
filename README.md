@@ -1,13 +1,23 @@
 ![Index app](./doc/assets/img/centralized.png)
 
-<p align="right">
-     <a href="./translation/README.es.md" target="_blank">
-       <img src="./doc/assets/translations/arg-flag.jpg" width="10%" height="10%" />
-   </a>
-    <a href="./README.md" target="_blank">
-       <img src="./doc/assets/translations/eeuu-flag.jpg" width="10%" height="10%" />
-   </a>
-</p>
+<div align="right">
+  <img width="24" height="24" src="./doc/assets/icons/backend/javascript-typescript/png/typescript.png" />
+  <img width="27" height="27" src="./doc/assets/icons/backend/javascript-typescript/png/nodejs.png" />
+  <img width="25" height="25" src="./doc/assets/icons/backend/javascript-typescript/png/express-js.png" />
+  <img width="29" height="27" src="./doc/assets/icons/devops/png/git.png" />
+  <img width="27" height="27" src="./doc/assets/icons/devops/png/postman.png" />
+</div>
+
+<br>
+
+<div align="right">
+  <a href="./doc/translation/README.es.md" target="_blank">
+    <img src="./doc/assets/icons/translation/arg-flag.jpg"  width="65" height="40" />
+  </a>
+  <a href="./README.md" target="_blank">
+    <img src="./doc/assets/icons/translation/eeuu-flag.jpg"  width="65" height="40" />
+  </a>
+</div>
 
 <div align="center">
 
@@ -22,9 +32,9 @@ Sistema de control de versiones web centralizado implementado con NodeJS, Typesc
 ## Índice 📜
 
 <details>
- <summary> Ver </summary>
+  <summary> Ver </summary>
 
- <br>
+  <br>
 
 ### Sección 1) Descripción, configuración y tecnologías.
 
@@ -44,7 +54,7 @@ Sistema de control de versiones web centralizado implementado con NodeJS, Typesc
 *   [3.0) Prueba de funcionalidad.](#30-prueba-de-funcionalidad-)
 *   [3.1) Referencias.](#31-referencias-)
 
-<br>
+  <br>
 
 </details>
 
@@ -57,13 +67,13 @@ Sistema de control de versiones web centralizado implementado con NodeJS, Typesc
 <details>
   <summary>Ver</summary>
 
- <br>
+  <br>
 
 ### 1.0.0) Descripción General
 
 ### 1.0.1) Descripción Arquitectura y Funcionamiento
 
-<br>
+  <br>
 
 </details>
 
@@ -71,9 +81,9 @@ Sistema de control de versiones web centralizado implementado con NodeJS, Typesc
 
 <details>
   <summary>Ver</summary>
-<br>
+  <br>
 
-<br>
+  <br>
 
 </details>
 
@@ -84,7 +94,7 @@ Sistema de control de versiones web centralizado implementado con NodeJS, Typesc
 <details>
   <summary>Ver</summary>
 
-<br>
+  <br>
 
 *   Instalamos la última versión LTS de [Nodejs(v18)](https://nodejs.org/en/download)
 
@@ -174,7 +184,7 @@ npx kill-port 8080
 npm run dev o npm start
 ```
 
-<br>
+  <br>
 
 </details>
 
@@ -183,9 +193,9 @@ npm run dev o npm start
 <details>
   <summary>Ver</summary>
 
- <br>
+  <br>
 
-<br>
+  <br>
 
 </details>
 
@@ -194,7 +204,7 @@ npm run dev o npm start
 <details>
   <summary>Ver</summary>
 
- <br>
+  <br>
 
 | **Tecnologías** | **Versión** | **Finalidad** |\
 | ------------- | ------------- | ------------- |
@@ -213,7 +223,7 @@ npm run dev o npm start
 | Typescript Toolbox - generate setters, getters, constrc, etc |
 | Otras |
 
-<br>
+  <br>
 
 </details>
 
@@ -226,7 +236,7 @@ npm run dev o npm start
 <details>
   <summary>Ver</summary>
 
-<br>
+  <br>
 
 </details>
 
@@ -234,9 +244,9 @@ npm run dev o npm start
 
 <details>
   <summary>Ver</summary>
-<br>
+  <br>
 
-<br>
+  <br>
 
 </details>
 
@@ -249,9 +259,9 @@ npm run dev o npm start
 <details>
   <summary>Ver</summary>
 
-<br>
+  <br>
 
-<br>
+  <br>
 
 </details>
 
@@ -260,7 +270,7 @@ npm run dev o npm start
 <details>
   <summary>Ver</summary>
 
- <br>
+  <br>
 
 #### Documentos
 
@@ -284,6 +294,6 @@ npm run dev o npm start
 *   [Ejemplo Logica para File paths](https://stackoverflow.com/questions/2727167/how-do-you-get-a-list-of-the-names-of-all-files-present-in-a-directory-in-node-j)
 *   [Métodos filehandle](https://nodejs.org/api/fs.html)
 
-<br>
+  <br>
 
 </details>
